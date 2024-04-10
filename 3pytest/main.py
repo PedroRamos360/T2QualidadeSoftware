@@ -1,4 +1,5 @@
 import math
+import pytest
 
 
 class Bhaskara:
@@ -22,6 +23,10 @@ class Bhaskara:
             return (root1, root2)
 
 
+def f():
+    raise SystemExit(1)
+
+
 # Test cases
 def test_bhaskara_real_roots():
     bhaskara = Bhaskara(1, -3, 2)
@@ -36,3 +41,8 @@ def test_bhaskara_complex_roots():
 def test_bhaskara_one_root():
     bhaskara = Bhaskara(1, -2, 1)
     assert bhaskara.calculate_roots() == (1.0,)
+
+
+def test_mytest():
+    with pytest.raises(SystemExit):
+        f()

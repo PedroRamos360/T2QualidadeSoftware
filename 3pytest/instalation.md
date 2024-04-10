@@ -15,7 +15,10 @@ Com ele é possível testar se uma condição é verdadeira.
 Caso seja necessário que o caso de teste detecte um erro, isso pode ser feito usando a função
 with:
 
-`with pytest.raises(NomeDoErro)`
+```python
+with pytest.raises(NomeDoErro):
+  funcao_para_rodar()
+```
 
 Para rodar os testes basta executar:
 

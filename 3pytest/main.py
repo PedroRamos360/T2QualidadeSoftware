@@ -43,6 +43,12 @@ def test_bhaskara_one_root():
     assert bhaskara.calculate_roots() == (1.0,)
 
 
+def test_bhaskara_a_equals_zero():
+    bhaskara = Bhaskara(0, 1, 1)
+    with pytest.raises(ZeroDivisionError):
+        bhaskara.calculate_roots()
+
+
 def test_mytest():
     with pytest.raises(SystemExit):
         f()

@@ -13,6 +13,10 @@ export class Bhaskara {
     const discriminant = this.b * this.b - 4 * this.a * this.c;
     const roots: number[] = [];
 
+    if (this.a == 0) {
+      throw new Error("A cannot be zero.");
+    }
+
     if (discriminant > 0) {
       const root1 = (-this.b + Math.sqrt(discriminant)) / (2 * this.a);
       const root2 = (-this.b - Math.sqrt(discriminant)) / (2 * this.a);

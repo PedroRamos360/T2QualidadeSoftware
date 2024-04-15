@@ -18,4 +18,11 @@ describe("Bhaskara", () => {
     const roots = equation.calculateRoots();
     expect(roots).toEqual([]);
   });
+
+  test("Calculate roots for a = 0", () => {
+    const equation = new Bhaskara(0, 1, 1);
+    expect(() => equation.calculateRoots()).toThrow(
+      new Error("A cannot be zero.")
+    );
+  });
 });
